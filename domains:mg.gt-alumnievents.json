@@ -1,0 +1,13 @@
+{
+  "owner": {
+    "username": "your-github-username",
+    "email": "your-email@example.com"
+  },
+  "records": {
+    "TXT": "v=spf1 include:mailgun.org ~all",
+    "MX": [
+      { "target": "mxa.mailgun.org", "priority": 10 },
+      { "target": "mxb.mailgun.org", "priority": 10 }
+    ]
+  }
+}
