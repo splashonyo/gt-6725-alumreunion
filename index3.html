@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GT Westin Scholar Alumni Reunion</title>
+<style>
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #222;
+  }
+  .header {
+    background: #28334A;
+    color: #B9975B;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+  }
+  .container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  .details {
+    background: #f9f9f6;
+    border-left: 4px solid #B9975B;
+    padding: 12px 18px;
+    margin: 20px 0;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  input[type=text], input[type=email], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  input[disabled] {
+    background: #eee;
+    color: #999;
+  }
+  button {
+    margin-top: 25px;
+    background: #28334A;
+    color: #B9975B;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #8F713D;
+    color: #fff;
+  }
+  #thankyou {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef7ee;
+    border: 1px solid #c3e6c3;
+    border-radius: 4px;
+    color: #256029;
+  }
+  .faq {
+    margin: 30px 0 10px;
+  }
+  .faq h2 {
+    font-size: 18px;
+    color: #28334A;
+    border-bottom: 2px solid #B9975B;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+  .faq-item {
+    margin-bottom: 16px;
+  }
+  .faq-item p.question {
+    font-weight: bold;
+    margin: 0 0 4px;
+  }
+  .faq-item p.answer {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .faq-item a {
+    color: #28334A;
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin: 30px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Georgia Tech Professional Education</h1>
+  <div> Student Honors Celebration: Westin Scholar Award Alumni Reunion</div>
+</div>
+
+<div class="container">
+  <p>Congratulations again on being named a Georgia Tech Westin Scholar Award recipient! You're invited back to celebrate with other past recipients at this year's Alumni Reunion.</p>
+
+  <div class="details">
+    <strong>Date:</strong> November 15, 2026<br>
+    <strong>Schedule:</strong><br>
+    &nbsp;&nbsp;4:30 – 5:00 PM &nbsp;Event Check-In<br>
+    &nbsp;&nbsp;5:00 – 6:00 PM &nbsp;Awards Presentation<br>
+    <strong>Location:</strong> Exhibition Hall - Midtown Ballroom
+  </div>
+
+  <p>Please confirm your attendance below so we can plan accordingly. Space is limited.</p>
+
+  <!-- No <form> tag / no action attribute: nothing here can be transmitted anywhere -->
+
+  <label for="name">Full Name</label>
+  <input type="text" id="name" placeholder="First Last">
+
+  <label for="phone">Phone Number</label>
+  <input type="text" id="phone" placeholder="000-000-0000">
+
+  <label for="email">GT Email</label>
+  <input type="email" id="email" placeholder="@gatech.edu">
+
+  <label for="attending">Will you be attending?</label>
+  <select id="attending">
+    <option>Yes, I'll be there</option>
+    <option>No, I can't make it</option>
+    <option>Maybe</option>
+  </select>
+
+  <label for="dietary">Dietary Preference (optional)</label>
+  <input type="text" id="dietary" placeholder="e.g. vegetarian, vegan, none">
+
+  <button onclick="showThanks()">RSVP</button>
+
+  <div id="thankyou">Thank you! Your RSVP has been noted. We look forward to seeing you.</div>
+</div>
+
+<div class="container faq">
+  <h2>Event information</h2>
+
+  <div class="faq-item">
+    <p class="question">Who can attend this event?</p>
+    <p class="answer">Award recipients are invited to attend and may bring guests. An RSVP is requested from award recipients; guests do not need to RSVP separately.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="question">What should I wear?</p>
+    <p class="answer">Business attire is requested for recipients, as you'll be asked to come to the stage for recognition. Guests are welcome to dress business casual.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="question">What parking is available?</p>
+    <p class="answer">Visitor parking is available near the Exhibition Hall. See the <a href="https://www.pts.gatech.edu/parking/visitor-parking/#visitorparkinglocation">campus visitor parking page</a> for current locations and rates.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="question">What should I expect?</p>
+    <p class="answer">Recipients will check in at the start of the event, followed by the awards presentation and a short reception afterward.</p>
+  </div>
+</div>
+
+<div class="footer">
+  Georgia Tech Professional Education &middot; Alumni Relations<br>
+  This event is by invitation for past Westin Scholar Award recipients only. For any questions please email honors.events@gatech.edu
+</div>
+
+<script>
+  // Purely client side cosmetic confirmation. No network request, no data sent anywhere.
+  function showThanks() {
+    document.getElementById('thankyou').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
