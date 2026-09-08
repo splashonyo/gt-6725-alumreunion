@@ -13,11 +13,6 @@
     padding: 0;
     color: #222;
   }
-  .page-wrap {
-    max-width: 660px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   .header {
     background: #28334A;
     color: #B9975B;
@@ -35,10 +30,14 @@
     font-size: 13px;
     color: #d4b483;
   }
+  .page-wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   .container {
-    max-width: 600px;
-    margin: 20px auto;
     background: #fff;
+    margin: 20px 0;
     padding: 25px 30px;
     border-radius: 6px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -63,9 +62,8 @@
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
     font-family: inherit;
-    font-size: 16px; /* prevents iOS zoom */
+    font-size: 16px;
   }
   input[disabled] {
     background: #eee;
@@ -97,14 +95,11 @@
     color: #256029;
   }
   .faq {
-    max-width: 600px;
-    margin: 0 auto 20px;
     background: #fff;
+    margin: 0 0 20px;
     padding: 25px 30px;
     border-radius: 6px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    width: 100%;
-    box-sizing: border-box;
   }
   .faq h2 {
     font-size: 17px;
@@ -127,25 +122,20 @@
     font-size: 14px;
     line-height: 1.5;
   }
-  .faq-item a {
-    color: #28334A;
-  }
+  .faq-item a { color: #28334A; }
   .footer {
     text-align: center;
     font-size: 11px;
     color: #888;
-    margin: 20px 0 30px;
-    padding: 0 20px;
+    margin: 0 0 30px;
+    padding: 0;
   }
   @media (max-width: 640px) {
     .container, .faq {
-      margin: 10px;
       padding: 20px 18px;
       border-radius: 4px;
     }
-    .header h1 {
-      font-size: 18px;
-    }
+    .header h1 { font-size: 18px; }
   }
 </style>
 </head>
@@ -157,74 +147,76 @@
 </div>
 
 <div class="page-wrap">
-<div class="container">
-  <p>Congratulations again on being named a Georgia Tech Westin Scholar Award recipient! You're invited back to celebrate with other past recipients at this year's Alumni Reunion.</p>
 
-  <div class="details">
-    <strong>Date:</strong> November 15, 2026<br>
-    <strong>Schedule:</strong><br>
-    &nbsp;&nbsp;4:30 – 5:00 PM &nbsp;Event Check-In<br>
-    &nbsp;&nbsp;5:00 – 6:00 PM &nbsp;Awards Presentation<br>
-    <strong>Location:</strong> Exhibition Hall - Midtown Ballroom
+  <div class="container">
+    <p>Congratulations again on being named a Georgia Tech Westin Scholar Award recipient! You're invited back to celebrate with other past recipients at this year's Alumni Reunion.</p>
+
+    <div class="details">
+      <strong>Date:</strong> November 15, 2026<br>
+      <strong>Schedule:</strong><br>
+      &nbsp;&nbsp;4:30 – 5:00 PM &nbsp;Event Check-In<br>
+      &nbsp;&nbsp;5:00 – 6:00 PM &nbsp;Awards Presentation<br>
+      <strong>Location:</strong> Exhibition Hall - Midtown Ballroom
+    </div>
+
+    <p>Please confirm your attendance below so we can plan accordingly. Space is limited.</p>
+
+    <!-- No form tag / no action attribute: nothing here can be transmitted anywhere -->
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="First Last">
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" placeholder="000-000-0000">
+
+    <label for="email">GT Email</label>
+    <input type="email" id="email" placeholder="@gatech.edu">
+
+    <label for="attending">Will you be attending?</label>
+    <select id="attending">
+      <option>Yes, I'll be there</option>
+      <option>No, I can't make it</option>
+      <option>Maybe</option>
+    </select>
+
+    <label for="dietary">Dietary Preference (optional)</label>
+    <input type="text" id="dietary" placeholder="e.g. vegetarian, vegan, none">
+
+    <button onclick="showThanks()">RSVP</button>
+
+    <div id="thankyou">Thank you! Your RSVP has been noted. We look forward to seeing you.</div>
   </div>
 
-  <p>Please confirm your attendance below so we can plan accordingly. Space is limited.</p>
+  <div class="faq">
+    <h2>Event information</h2>
 
-  <!-- No form tag / no action attribute: nothing here can be transmitted anywhere -->
+    <div class="faq-item">
+      <p class="question">Who can attend this event?</p>
+      <p class="answer">Award recipients are invited to attend and may bring guests. An RSVP is requested from award recipients; guests do not need to RSVP separately.</p>
+    </div>
 
-  <label for="name">Full Name</label>
-  <input type="text" id="name" placeholder="First Last">
+    <div class="faq-item">
+      <p class="question">What should I wear?</p>
+      <p class="answer">Business attire is requested for recipients, as you'll be asked to come to the stage for recognition. Guests are welcome to dress business casual.</p>
+    </div>
 
-  <label for="phone">Phone Number</label>
-  <input type="text" id="phone" placeholder="000-000-0000">
+    <div class="faq-item">
+      <p class="question">What parking is available?</p>
+      <p class="answer">Visitor parking is available near the Exhibition Hall. See the <a href="https://www.pts.gatech.edu/parking/visitor-parking/#visitorparkinglocation">campus visitor parking page</a> for current locations and rates.</p>
+    </div>
 
-  <label for="email">GT Email</label>
-  <input type="email" id="email" placeholder="@gatech.edu">
-
-  <label for="attending">Will you be attending?</label>
-  <select id="attending">
-    <option>Yes, I'll be there</option>
-    <option>No, I can't make it</option>
-    <option>Maybe</option>
-  </select>
-
-  <label for="dietary">Dietary Preference (optional)</label>
-  <input type="text" id="dietary" placeholder="e.g. vegetarian, vegan, none">
-
-  <button onclick="showThanks()">RSVP</button>
-
-  <div id="thankyou">Thank you! Your RSVP has been noted. We look forward to seeing you.</div>
-</div>
-
-<div class="faq">
-  <h2>Event information</h2>
-
-  <div class="faq-item">
-    <p class="question">Who can attend this event?</p>
-    <p class="answer">Award recipients are invited to attend and may bring guests. An RSVP is requested from award recipients; guests do not need to RSVP separately.</p>
+    <div class="faq-item">
+      <p class="question">What should I expect?</p>
+      <p class="answer">Recipients will check in at the start of the event, followed by the awards presentation and a short reception afterward.</p>
+    </div>
   </div>
 
-  <div class="faq-item">
-    <p class="question">What should I wear?</p>
-    <p class="answer">Business attire is requested for recipients, as you'll be asked to come to the stage for recognition. Guests are welcome to dress business casual.</p>
+  <div class="footer">
+    Georgia Tech Professional Education &middot; Alumni Relations<br>
+    This event is by invitation for past award recipients only.<br>
+    For any questions please email honors.events@gt-alumnievents.com
   </div>
 
-  <div class="faq-item">
-    <p class="question">What parking is available?</p>
-    <p class="answer">Visitor parking is available near the Exhibition Hall. See the <a href="https://www.pts.gatech.edu/parking/visitor-parking/#visitorparkinglocation">campus visitor parking page</a> for current locations and rates.</p>
-  </div>
-
-  <div class="faq-item">
-    <p class="question">What should I expect?</p>
-    <p class="answer">Recipients will check in at the start of the event, followed by the awards presentation and a short reception afterward.</p>
-  </div>
-</div>
-
-<div class="footer">
-  Georgia Tech Professional Education &middot; Alumni Relations<br>
-  This event is by invitation for past award recipients only.<br>
-  For any questions please email honors.events@gt-alumnievents.com
-</div>
 </div>
 
 <script>
