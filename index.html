@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GT Westin Scholar Alumni Reunion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GT Student Honors Celebration: Alumni Reunion</title>
 <style>
+  * { box-sizing: border-box; }
   body {
     font-family: Georgia, 'Times New Roman', serif;
     background: #f4f4f4;
@@ -11,22 +13,33 @@
     padding: 0;
     color: #222;
   }
+  .page-wrap {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   .header {
     background: #28334A;
     color: #B9975B;
-    padding: 30px 20px;
+    padding: 25px 20px;
     text-align: center;
   }
   .header h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
     letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+  .header p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #d4b483;
   }
   .container {
     max-width: 600px;
-    margin: 30px auto;
+    margin: 20px auto;
     background: #fff;
-    padding: 30px 40px;
+    padding: 25px 30px;
     border-radius: 6px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   }
@@ -35,6 +48,8 @@
     border-left: 4px solid #B9975B;
     padding: 12px 18px;
     margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.8;
   }
   label {
     display: block;
@@ -44,27 +59,29 @@
   }
   input[type=text], input[type=email], select {
     width: 100%;
-    padding: 8px;
+    padding: 10px 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: inherit;
+    font-size: 16px; /* prevents iOS zoom */
   }
   input[disabled] {
     background: #eee;
     color: #999;
   }
   button {
-    margin-top: 25px;
+    margin-top: 20px;
     background: #28334A;
     color: #B9975B;
     border: none;
-    padding: 12px 24px;
+    padding: 14px 28px;
     border-radius: 4px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+    width: 100%;
   }
   button:hover {
     background: #8F713D;
@@ -80,14 +97,22 @@
     color: #256029;
   }
   .faq {
-    margin: 30px 0 10px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
   }
   .faq h2 {
-    font-size: 18px;
+    font-size: 17px;
     color: #28334A;
     border-bottom: 2px solid #B9975B;
     padding-bottom: 6px;
-    margin-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 14px;
   }
   .faq-item {
     margin-bottom: 16px;
@@ -95,6 +120,7 @@
   .faq-item p.question {
     font-weight: bold;
     margin: 0 0 4px;
+    font-size: 14px;
   }
   .faq-item p.answer {
     margin: 0;
@@ -106,9 +132,20 @@
   }
   .footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     color: #888;
-    margin: 30px 0;
+    margin: 20px 0 30px;
+    padding: 0 20px;
+  }
+  @media (max-width: 640px) {
+    .container, .faq {
+      margin: 10px;
+      padding: 20px 18px;
+      border-radius: 4px;
+    }
+    .header h1 {
+      font-size: 18px;
+    }
   }
 </style>
 </head>
@@ -116,9 +153,10 @@
 
 <div class="header">
   <h1>Georgia Tech Professional Education</h1>
-  <div> Student Honors Celebration: Alumni Reunion</div>
+  <p>Student Honors Celebration &middot; Alumni Reunion</p>
 </div>
 
+<div class="page-wrap">
 <div class="container">
   <p>Congratulations again on being named a Georgia Tech Westin Scholar Award recipient! You're invited back to celebrate with other past recipients at this year's Alumni Reunion.</p>
 
@@ -132,7 +170,7 @@
 
   <p>Please confirm your attendance below so we can plan accordingly. Space is limited.</p>
 
-  <!-- No <form> tag / no action attribute: nothing here can be transmitted anywhere -->
+  <!-- No form tag / no action attribute: nothing here can be transmitted anywhere -->
 
   <label for="name">Full Name</label>
   <input type="text" id="name" placeholder="First Last">
@@ -155,10 +193,10 @@
 
   <button onclick="showThanks()">RSVP</button>
 
-  <div id="thankyou">Thank you! Your RSVP has been noted. We look forward to seeing you. </div>
+  <div id="thankyou">Thank you! Your RSVP has been noted. We look forward to seeing you.</div>
 </div>
 
-<div class="container faq">
+<div class="faq">
   <h2>Event information</h2>
 
   <div class="faq-item">
@@ -184,11 +222,12 @@
 
 <div class="footer">
   Georgia Tech Professional Education &middot; Alumni Relations<br>
-  This event is by invitation for past Westin Scholar Award recipients only. For any questions please email honors.events@gatech.edu
+  This event is by invitation for past award recipients only.<br>
+  For any questions please email honors.events@gt-alumnievents.com
+</div>
 </div>
 
 <script>
-  // Purely client side cosmetic confirmation. No network request, no data sent anywhere.
   function showThanks() {
     document.getElementById('thankyou').style.display = 'block';
   }
