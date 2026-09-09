@@ -149,7 +149,7 @@
 <div class="page-wrap">
 
   <div class="container">
-    <p>Congratulations again on being named a Georgia Tech award recipient! You're invited back to celebrate with other past recipients at this year's Alumni Reunion.</p>
+    <p>Congratulations again on being named a Georgia Tech Westin Scholar Award recipient! You're invited back to celebrate with other past recipients at this year's Alumni Reunion.</p>
 
     <div class="details">
       <strong>Date:</strong> November 15, 2026<br>
@@ -185,6 +185,12 @@
     <button onclick="showThanks()">RSVP</button>
 
     <div id="thankyou">Thank you! Your RSVP has been noted. We look forward to seeing you.</div>
+
+    <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee;">
+      <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Would you like to support future Professional Education events?</p>
+      <button onclick="showDonate()" style="background: #B9975B; color: #fff; border: none; padding: 10px 24px; border-radius: 4px; font-size: 14px; cursor: pointer; width: auto;">Donate Here</button>
+      <div id="donatemsg" style="display:none; margin-top: 10px; font-size: 13px; color: #888;">Thank you for your interest! Donation processing is currently unavailable online. Please contact us directly at honors.events@gt-alumnievents.com</div>
+    </div>
   </div>
 
   <div class="faq">
@@ -222,6 +228,9 @@
 <script>
   function showThanks() {
     document.getElementById('thankyou').style.display = 'block';
+  }
+  function showDonate() {
+    document.getElementById('donatemsg').style.display = 'block';
   }
 </script>
 
